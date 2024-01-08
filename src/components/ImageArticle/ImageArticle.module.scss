@@ -1,82 +1,11 @@
-// .ImageArticle {
-//     position: relative;
-//     background-color: #f0f0f0;
-//     padding: 20px;
-//     margin-top: 20px;
-//     text-align: center;
-  
-//     h2 {
-//       font-size: 2em;
-//       font-weight: 100;
-//       text-transform: uppercase;
-//       margin-bottom: 0.1em;
-//       color: #333;
-//     }
-  
-//     .imageContainer {
-//       display: flex;
-//       justify-content: space-between;
-//       margin-top: 15px;
-  
-//       .imageWithText {
-//         text-align: center;
-//         width: 48%;
-//         position: relative;
-  
-//         h2 {
-//           font-size: 1.5em; // Adjust as needed
-//           margin-bottom: 0.5em; // Adjust as needed
-//         }
-  
-//         img {
-//           width: 100%;
-//           border: 1px solid #ddd;
-//           border-radius: 8px;
-//           height: 400px;
-//           object-fit: cover;
-//         }
-  
-//         .imageP {
-//           position: absolute;
-//           top: 50%;
-//           left: 50%;
-//           transform: translate(-50%, -50%);
-//           font-size: 1em;
-//           color: #333;
-//           padding: 2em;
-//           margin: 0;
-//         }
-  
-//         .link {
-//           position: absolute;
-//           bottom: 10px;
-//           left: 50%;
-//           transform: translateX(-50%);
-//           display: block;
-//           text-align: center;
-//           text-decoration: none;
-//           color: black;
-//           border: 1px solid black;
-//           padding: 5px 10px;
-//           width: 15%;
-//         }
-  
-//         .link:hover {
-//           text-decoration: none;
-//           color: lightgrey;
-//         }
-//       }
-//     }
-// }
-
-
 // ImageArticle.module.scss
 .ImageArticle {
     position: relative;
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
     text-align: center;
+    bottom: 230px;
   
     .imageContainer {
       display: flex;
@@ -107,27 +36,31 @@
         h2 {
           font-size: 1.5em; // Adjust as needed
           margin-bottom: 0.5em; // Adjust as needed
+          color: white;
+          font-weight: 100;
         }
   
         .imageP {
           font-size: 1em;
-          color: #333;
+          color: white;
           padding: 2em;
           margin: 0;
         }
   
         .link {
           position: absolute;
-          bottom: 10px;
+          top: 100%;
           left: 50%;
           transform: translateX(-50%);
           display: block;
           text-align: center;
           text-decoration: none;
-          color: black;
-          border: 1px solid black;
+          color: white;
+          background-color: black;
+          border: 1px solid white;
           padding: 5px 10px;
           width: 15%;
+          text-transform: uppercase;
         }
   
         .link:hover {

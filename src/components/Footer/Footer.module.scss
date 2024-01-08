@@ -1,0 +1,127 @@
+// Footer.module.scss
+.Footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .labelInsideInput {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: #aaa;
+    transition: top 0.3s, transform 0.3s, font-size 0.3s;
+  }
+  
+  .formGroup {
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 2em;
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: border 0.3s;
+  
+      &:focus + .labelInsideInput,
+      &:not(:placeholder-shown) + .labelInsideInput {
+        top: 5px;
+        transform: translateY(0);
+        font-size: 0.8em;
+      }
+    }
+  
+    .error {
+      color: red;
+    }
+  }
+  
+  button {
+    background-color: #ffd700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 2em;
+  
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footerLeft {
+    flex: 1;
+  }
+  
+  .footerRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footerRight .footerSection {
+    margin-bottom: 20px;
+
+  }
+  .findUsSection {
+    margin-right: 9em; /* Adjust the margin-left value as needed */
+  }
+  .footerSection h3 {
+    color: white;
+    font-weight: 100;
+    
+  }
+
+  
+  .quickLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      margin-bottom: 5px;
+    }
+  
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #ffd700; // Change to your desired hover color
+      }
+    }
+  }
+  
+  .followUsIcons {
+    display: flex;
+    align-items: center;
+  
+    & > *:not(:last-child) {
+      margin-right: 15px; /* Adjust the margin as needed */
+    }
+  
+    svg {
+      font-size: 2.5em; /* Adjust the font size as needed */
+      color: #fff;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #ffd700; /* Change to your desired hover color */
+      }
+    }
+  }
+  
