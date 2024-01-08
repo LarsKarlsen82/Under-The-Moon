@@ -1,0 +1,33 @@
+.TransparentArticle {
+    position: absolute;
+    top: 140%; /* Adjust the vertical position as needed */
+    left: 50%; /* Adjust the horizontal position as needed */
+    right: -50%;
+    height: 10em;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);  /* Adjust the alpha (transparency) as needed */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  
+    h2 {
+      font-size: 1.5em; /* Adjust the font size as needed */
+      text-align: center;
+      font-weight: 100;
+      margin-bottom: 10px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  
+    .paragraph {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: #fff;
+        font-size: 1em;
+        padding: 2em 10em 6em 10em; /* Adjust the padding as needed */
+        margin: 0;
+      }
+  }

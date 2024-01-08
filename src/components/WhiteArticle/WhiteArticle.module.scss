@@ -1,0 +1,26 @@
+.WhiteArticle {
+    position: absolute;
+    top: 300%; /* Adjust the vertical position as needed */
+    left: 50%; /* Adjust the horizontal position as needed */
+    transform: translate(-50%, -50%);
+    // background: #fff; /* White background color */
+    background-color: red;
+    padding: 20px;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+  
+    h2 {
+      font-size: 1.5em; /* Adjust the font size as needed */
+      font-weight: 100;
+      margin-bottom: 10px;
+      color: #333; /* Text color */
+    }
+  
+    .paragraph {
+      font-size: 1em; /* Adjust the font size as needed */
+      color: #333; /* Text color */
+      padding: 2em; /* Adjust the padding as needed */
+      margin: 0;
+    }
+  }

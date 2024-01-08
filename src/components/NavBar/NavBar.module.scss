@@ -1,0 +1,33 @@
+.NavBar {
+    padding: 10px; /* Add padding or adjust as needed */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+
+    ul {
+      margin: 0;
+      padding: 0 3em;
+      list-style: none; /* Remove default list styles */
+      display: flex; /* Display list items horizontally */
+      justify-content: right;
+
+      li {
+        margin: 1em 1em 1em 1em;
+        cursor: pointer;
+
+        a {
+          text-decoration: none; /* Remove underline from anchor links */
+          color: #FFFFFF; /* Set link color */
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: none;
+            color: lightgrey;
+          }
+        }
+      }
+    }
+  }
+  
