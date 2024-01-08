@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import styles from './Footer.module.scss';
 
-
 const Footer = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,6 +11,7 @@ const Footer = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false); // New state for confirmation
 
   const validateForm = () => {
     let isValid = true;
@@ -37,6 +37,7 @@ const Footer = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: '' });
+    setSubmitted(false); // Reset confirmation when changing input
   };
 
   const handleSubmit = (e) => {
@@ -45,6 +46,7 @@ const Footer = () => {
     if (validateForm()) {
       // Perform form submission or other actions here
       console.log('Form submitted:', formData);
+      setSubmitted(true); // Set confirmation state to true
     }
   };
 
@@ -52,31 +54,41 @@ const Footer = () => {
     <footer className={styles.Footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
-        <h3 style={{ marginLeft: '2em' }}>SUBSCRIBE TO NEWSLETTER</h3>
+          <h3 style={{ marginLeft: '2em' }}>SUBSCRIBE TO NEWSLETTER</h3>
           <form onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <label htmlFor="name" className={styles.labelInsideInput}>Full name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              {errors.name && <span className={styles.error}>{errors.name}</span>}
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="email" className={styles.labelInsideInput}>Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && <span className={styles.error}>{errors.email}</span>}
-            </div>
-            <button type="submit">SIGN UP</button>
+            {submitted ? (
+              <p style={{ color: '#ffd700' }}>Thank you for subscribing!</p>
+            ) : (
+              <>
+                <div className={styles.formGroup}>
+                  <label htmlFor="name" className={styles.labelInsideInput}>
+                    Full name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  {errors.name && <span className={styles.error}>{errors.name}</span>}
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="email" className={styles.labelInsideInput}>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && <span className={styles.error}>{errors.email}</span>}
+                </div>
+                <button type="submit">SIGN UP</button>
+              </>
+            )}
           </form>
         </div>
         
