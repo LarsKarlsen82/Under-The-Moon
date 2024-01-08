@@ -1,26 +1,47 @@
 .WhiteArticle {
     position: absolute;
-    top: 300%; /* Adjust the vertical position as needed */
+    top: 130%; /* Adjust the vertical position as needed */
     left: 50%; /* Adjust the horizontal position as needed */
     transform: translate(-50%, -50%);
     // background: #fff; /* White background color */
-    background-color: red;
+    background-color: white;
     padding: 20px;
     text-align: center;
-    height: 10vh;
     width: 100%;
+    margin-top: 20px;
+    height: 300px;
   
     h2 {
-      font-size: 1.5em; /* Adjust the font size as needed */
+      font-size: 2em; /* Adjust the font size as needed */
       font-weight: 100;
+      text-transform: uppercase;
       margin-bottom: 10px;
       color: #333; /* Text color */
     }
   
-    .paragraph {
+    .whiteP {
       font-size: 1em; /* Adjust the font size as needed */
       color: #333; /* Text color */
-      padding: 2em; /* Adjust the padding as needed */
-      margin: 0;
+      padding: 2em 25em 1em 25em; /* Top, right, bottom, left padding */
+      margin: 0 1em; /* right and left */
     }
+    .link {
+        /* Styles for the link */
+        display: block; /* Make the link a block-level element for centering */
+        text-align: center;
+        text-decoration: none; /* Remove default underline styling */
+        color: black; /* Set the link color to blue or adjust as needed */
+        border: 1px solid black; /* Add a 1px solid border around the link */
+        padding: 5px 10px; /* Top, right, bottom, left padding */
+        width: 10%;
+        margin: 1em auto; /* Center the link horizontally */
+      }
+      
+      .link:hover {
+        /* Styles for the link on hover */
+        text-decoration: none;
+        color: lightgrey;
+      }
+
+
   }

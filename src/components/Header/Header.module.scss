@@ -1,34 +1,23 @@
 /* Header.module.scss */
 
-.Header {
-    /* Your existing styles for the header */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 900px;
-  }
-  
-  .Hero {
+.Hero {
     /* Styles for the hero section */
     background-image: url('../../../assets/img/Hero_image.jpg');
     /* Adjust the path based on the location of your SCSS file */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    height: 100vh; /* Set the height to the viewport height */
+    background-attachment: fixed; /* Add this line for parallax effect */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    position: relative;
+    color: #fff;
+    padding: 300px;
+    text-align: center;
+    margin: 0;
   
     h1 {
-      font-size: 8em; /* Adjust the font size as needed */
+      font-size: 6em;
       font-weight: 100;
       margin-bottom: 10px;
-      color: white;
-      z-index: 1; /* Ensure the text is on top of the background */
     }
-  } 
+  }
   
